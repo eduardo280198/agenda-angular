@@ -1,0 +1,89 @@
+
+<h4 class="text-center">Agregar nuevo Contacto</h4>
+
+<form [formGroup]="agendaForm" (ngSubmit)="onSubmit()">
+
+  <div class="cointener">
+
+    <!-- Nombre -->
+    <div class="row">
+      <div class="col">
+
+        <mat-form-field >
+          <mat-label>Nombre(s)</mat-label>
+          <input
+            type="text"
+            name="name"
+            matInput
+            required
+            formControlName="name"
+          />
+        </mat-form-field>
+
+      </div>
+
+      <div class="col">
+
+        <mat-form-field >
+          <mat-label>Apellidos</mat-label>
+          <input
+            type="text"
+            name="lastName"
+            matInput
+            required
+            formControlName="lastName"
+          />
+        </mat-form-field>
+
+      </div>
+    </div>
+
+    <!-- Telefono -->
+    <div class="row">
+      <div class="col-md-6 col-sm" >
+
+        <mat-form-field >
+          <mat-label>Celular</mat-label>
+          <input
+            type="tel"
+            name="cellPhone"
+            maxlength="10"
+            placeholder="555-555-5555"
+            matInput
+            required
+            formControlName="cellPhone"
+          />
+        </mat-form-field>
+
+      </div>
+    </div>
+
+    <!-- Dirección -->
+    <div class="row">
+
+      <mat-form-field>
+        <mat-label>Dirección</mat-label>
+        <input
+          type="text"
+          name="address"
+          matInput
+          required
+          formControlName="address"
+
+        />
+      </mat-form-field>
+
+    </div>
+
+  </div>
+
+  <div>
+
+    <button mat-raised-buton color="primary" type="submit" mat-raised-button color="primary">Guardar</button>
+
+  </div>
+</form>
+
+<pre>
+  {{ currentPersona | json}}
+</pre>
