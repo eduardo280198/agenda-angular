@@ -8,7 +8,7 @@
 
 <!-- </div> -->
 
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" class="fixed-toolbar">
 
   <button mat-icon-button (click)="sidenav.toggle()">
     <mat-icon>menu</mat-icon>
@@ -17,9 +17,10 @@
 
 <mat-sidenav-container class="row p-3">
 
-  <mat-sidenav #sidenav mode="side" opened class="col-4">
+  <mat-sidenav #sidenav mode="side" class="col-4">
     <!-- Form -->
-    <agenda-form-page></agenda-form-page>
+    <!-- <agenda-form-page></agenda-form-page> -->
+    <router-outlet></router-outlet>
 
   </mat-sidenav>
 

@@ -6,18 +6,22 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { FormPageComponent } from './pages/form-page/form-page.component';
 import { TablePageComponent } from './pages/table-page/table-page.component';
+import { AppRoutingModule } from '../app-routing.module';
+import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 
 
 @NgModule({
   declarations: [
     FormPageComponent,
-    TablePageComponent
+    TablePageComponent,
+    ConfirmDialogComponent,
   ],
   imports: [
     CommonModule,
     FormsModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   exports: [
     FormPageComponent,

@@ -14,6 +14,7 @@
           <input
             type="text"
             name="name"
+            placeholder="Eduardo A."
             matInput
             required
             formControlName="name"
@@ -29,6 +30,7 @@
           <input
             type="text"
             name="lastName"
+            placeholder="Lozano"
             matInput
             required
             formControlName="lastName"
@@ -66,6 +68,7 @@
         <input
           type="text"
           name="address"
+          placeholder="Calle S/N Col. Alguna"
           matInput
           required
           formControlName="address"
@@ -77,13 +80,18 @@
 
   </div>
 
-  <div>
 
-    <button mat-raised-buton color="primary" type="submit" mat-raised-button color="primary">Guardar</button>
+  <div class="flex justify-content-between">
+
+    <button mat-raised-buton color="primary" type="submit" mat-raised-button class="mr-2">Guardar</button>
+
+    <button mat-raised-buton color="warn" type="button" mat-raised-button (click)="onDeletePersona()" *ngIf="currentPersona.id">Eliminar</button>
 
   </div>
 </form>
 
-<pre>
+
+
+<!-- <pre>
   {{ currentPersona | json}}
-</pre>
+</pre> -->
